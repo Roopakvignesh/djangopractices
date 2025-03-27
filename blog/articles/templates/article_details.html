@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+{% block content %}
+
+{% if article %}
+<h1>{{article.name}}</h1>
+<h3>{{article.content}}</h3>
+<h2>-- {{article.author}}</h2>
+{% else %}
+<big><p>Article doesn't exist</p></big>
+{% endif %}
+{% endblock content %}

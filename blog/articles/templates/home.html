@@ -1,0 +1,7 @@
+{% extends 'main.html' %}
+{% block content %}
+<h1>Today's Articles</h1>
+{% for article in article_list %}
+<h3><a href="">{{article.name}}</a></h3>
+{% endfor %}
+{% endblock content %}
