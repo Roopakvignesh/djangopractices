@@ -1,0 +1,6 @@
+{% extends 'main.html' %}
+{% block content %}
+    {% for data in alist %}
+        <a href="{% url 'adet' data.id %}"><h1>{{data.name}}</h1></a>
+    {% endfor %}
+{% endblock content %}

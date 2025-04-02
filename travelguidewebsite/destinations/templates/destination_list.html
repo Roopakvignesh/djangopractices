@@ -1,0 +1,11 @@
+{% extends 'main.html' %}
+{% block content %}
+    {% for category in typelist %}
+        <h1>{{ category }}s:-</h1>
+        {% for data in dlist %}
+            {% if data.type == category %}
+                <a href="{% url 'ddet' data.id %}"><h1>{{data.name}}</h1></a>
+            {% endif %}
+        {% endfor %}
+    {% endfor %}
+{% endblock content %}

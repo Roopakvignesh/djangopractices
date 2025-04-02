@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Guide Website</title>
+    <style>
+        *{
+            box-sizing: border-box;
+            /* margin: 25px; */
+            padding: 0;
+        }
+        footer{
+            background-color:aquamarine;
+        }
+        nav {
+            background-color: lightblue;
+            padding: 10px;
+        }
+        nav a {
+            text-decoration: none;
+            color: darkblue;
+            margin: 0 10px;
+        }
+        nav a:hover {
+            color: navy;
+        }
+        a {
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Arial, sans-serif;
+            transition: color 0.3s ease, transform 0.2s ease;
+        }
+        a:hover {
+            color: brown;
+            transform: scale(1.1);
+        }
+        a:hover {
+            color:brown;
+        }
+    </style>
+</head>
+<body>
+    {% include 'nav.html' %}
+    {% block content %}
+    {% endblock content %}
+    {% include 'footer.html' %}
+
+</body>
+</html>

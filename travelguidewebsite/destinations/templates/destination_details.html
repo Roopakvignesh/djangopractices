@@ -1,0 +1,16 @@
+{% extends 'main.html' %}
+{% block content %}
+    <h1>ID : </h1> <h1>{{data.id}}</h1><br>
+    <h2>PLACE NAME : </h1> <h1>{{data.name}}</h1><br>
+    <h3>LOCATION : </h2><h1>{{data.location}}</h1><br>
+    <h4>TYPE : </h4> <h1>{{data.type}}</h1><br>
+    <h5>RATING : </h5> <h1>{{data.rating}}</h1><br>
+    <img src="{{data.image}}" alt="{{data.name}}" height="500px" width="800px"><br>
+    <h1>DESCRIPTION : </h1> <p>{{data.description}}</p><br>
+    <h1>Activities:</h1><br>
+    {% for i in activities %}
+        {% if data.id == i.destination_id %}
+            <a href="{% url 'adet' i.id %}"><h3>{{i.name}}</h3></a>
+        {% endif %}
+    {% endfor %}
+{% endblock content %}
